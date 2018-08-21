@@ -16,8 +16,8 @@
 if (isset($_GET['submit'])) {
 	$brutto = ($_GET['brutto']);
 	$discount = ($_GET['discount']);
-		if ($discount>0) {
-			$discount==$discount;
+		if ($discount > 0) {
+			$discount == $discount;
 		} else {
 			$discount = 0;
 		}
