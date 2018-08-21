@@ -14,20 +14,20 @@
  *Calculation of salary
  */
 if (isset($_GET['submit'])) {
-	$brutto=($_GET['brutto']);
-	$discount=($_GET['discount']);
-		if ($discount>0){
+	$brutto = ($_GET['brutto']);
+	$discount = ($_GET['discount']);
+		if ($discount>0) {
 			$discount==$discount;
-		}else{
-			$discount=0;
+		} else {
+			$discount = 0;
 		}
 		
-		$sum1=$brutto-($brutto*0.11);
-		$sum2=$sum1-($sum1*0.20);
-		$sum3=$sum1-200*$discount;
-		$sum4=($sum3-($sum3*0.20))+(200*$discount);
+		$sum1 = $brutto - ($brutto * 0.11);
+		$sum2 = $sum1 - ($sum1 * 0.20);
+		$sum3 = $sum1 - 200 * $discount;
+		$sum4 = ($sum3 - ($sum3 * 0.20)) + (200 * $discount);
 		
-			if ($brutto <= 450 || $discount*200 > $sum1){
+			if ($brutto <= 450 || $discount * 200 > $sum1){
 				echo 'Нетто сумма: '.$sum1. ' euro';
 			} else if ($brutto > 450 && $discount <=0){
 				echo 'Нетто сумма: '.$sum2. ' euro';
